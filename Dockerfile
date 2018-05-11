@@ -25,5 +25,5 @@ CMD ["/bin/bash", "-c", "howsmyssl \
     -allowListsFile=/etc/howsmyssl-allowlists/allow_lists.json \
     -googAcctConf=/secrets/howsmyssl-logging-svc-account/howsmyssl-logging.json \
     -allowLogName=howsmyssl_allowance_checks \
-    -cert=/go/src/github.com/m-mostefaoui/howsmyssl/certs/myssl.parcelvision.info \
+    -cert=/go/src/github.com/m-mostefaoui/howsmyssl/certs/myssl.parcelvision.info.cert \
     -key=/go/src/github.com/m-mostefaoui/howsmyssl/certs/key.pem"]
