@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	tls "github.com/jmhodges/howsmyssl/tls110"
+	tls "github.com/m-mostefaoui/howsmyssl/tls110"
 )
 
 type rating string
