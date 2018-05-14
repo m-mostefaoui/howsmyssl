@@ -7,10 +7,8 @@ ADD . /go/src/github.com/m-mostefaoui/howsmyssl
 
 RUN go install github.com/m-mostefaoui/howsmyssl
 
-# Provided by kubernetes secrets or some such
-
-RUN mkdir /certs/howsmyssl-logging-svc-account/
-RUN mkdir /etc/howsmyssl-allowlists/
+RUN mkdir -p /certs/howsmyssl-logging-svc-account/
+RUN mkdir -p /etc/howsmyssl-allowlists/
 RUN touch /certs/howsmyssl-logging-svc-account/howsmyssl-logging.json
 RUN touch /etc/howsmyssl-allowlists/allow_lists.json
 
@@ -28,7 +26,7 @@ CMD ["/bin/bash", "-c", "howsmyssl \
     -vhost=www.howsmyssl.com \
     -acmeRedirect=$ACME_REDIRECT_URL \
     -allowListsFile=/etc/howsmyssl-allowlists/allow_lists.json \
-    -googAcctConf=/secrets/howsmyssl-logging-svc-account/howsmyssl-logging.json \
+    -googAcctConf=/certs/howsmyssl-logging-svc-account/howsmyssl-logging.json \
     -allowLogName=howsmyssl_allowance_checks \
     -cert=/go/src/github.com/m-mostefaoui/howsmyssl/certs/ssl.parcelvision.info.cer \
     -key=/go/src/github.com/m-mostefaoui/howsmyssl/certs/ssl.parcelvision.info.key"]
