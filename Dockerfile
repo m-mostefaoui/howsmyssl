@@ -18,6 +18,7 @@ CMD ["/bin/bash", "-c", "howsmyssl \
     -adminAddr=:4567 \
     -templateDir=/go/src/github.com/m-mostefaoui/howsmyssl/templates \
     -staticDir=/go/src/github.com/m-mostefaoui/howsmyssl/static \
+    -vhost=ssl-pvr.azurewebsites.net \
     -acmeRedirect=$ACME_REDIRECT_URL \
     -allowLogName=howsmyssl_allowance_checks \
     -cert=/go/src/github.com/m-mostefaoui/howsmyssl/certs/ssl.parcelvision.info.cer \
