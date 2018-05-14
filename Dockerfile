@@ -8,7 +8,13 @@ ADD . /go/src/github.com/m-mostefaoui/howsmyssl
 RUN go install github.com/m-mostefaoui/howsmyssl
 
 # Provided by kubernetes secrets or some such
-VOLUME "/certs"
+
+RUN mkdir /certs/howsmyssl-logging-svc-account
+RUN mkdir /etc/howsmyssl-allowlists
+RUN touch /certs/howsmyssl-logging-svc-account/howsmyssl-logging.json
+RUN touch /etc/howsmyssl-allowlists/allow_lists.json
+
+VOLUME /certs
 
 RUN chown -R www-data /go/src/github.com/m-mostefaoui/howsmyssl
 
