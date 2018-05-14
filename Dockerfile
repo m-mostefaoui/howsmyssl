@@ -26,4 +26,4 @@ CMD ["/bin/bash", "-c", "howsmyssl \
     -googAcctConf=/secrets/howsmyssl-logging-svc-account/howsmyssl-logging.json \
     -allowLogName=howsmyssl_allowance_checks \
     -cert=/go/src/github.com/m-mostefaoui/howsmyssl/certs/ssl.parcelvision.info.crt \
-    -key=/go/src/github.com/m-mostefaoui/howsmyssl/certs/ssl.parcelvision.info.pem"]
+    -key=/go/src/github.com/m-mostefaoui/howsmyssl/certs/ssl.parcelvision.info.key"]
